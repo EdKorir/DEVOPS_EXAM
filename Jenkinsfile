@@ -10,7 +10,7 @@ stage('Build docker image'){
 }
 
 stage('Docker login to hub and push the image'){
-  sh "docker login -u 'sigwor' -p 'Phoenix9000'"
+  sh "docker login -u 'sigwor' -p 'Phoenix9000' "
   sh "docker tag korir:latest sigwor/korir:latest"
   sh "docker push sigwor/korir:latest"
 }
